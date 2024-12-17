@@ -2,14 +2,13 @@ import psutil
 import time
 import logging
 
-# Setup logging
 logging.basicConfig(filename="system_health.log", level=logging.INFO, 
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Thresholds
-CPU_THRESHOLD = 80  # in percentage
-MEMORY_THRESHOLD = 80  # in percentage
-DISK_THRESHOLD = 80  # in percentage
+CPU_THRESHOLD = 80  
+MEMORY_THRESHOLD = 80  
+DISK_THRESHOLD = 80  
 
 def check_cpu():
     cpu_usage = psutil.cpu_percent(interval=1)
